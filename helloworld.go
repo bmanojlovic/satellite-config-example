@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 )
 
 func main() {
@@ -13,7 +14,7 @@ func main() {
 		if err_hostname != nil {
 			fmt.Println(err_hostname)
 		}
-		fmt.Fprintf(w, "Hello, World on %s!", hostname)
+		fmt.Fprintf(w, "Hello, World on %s at %s!", hostname, time.Now().Format(time.RFC850))
 	})
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal(err)
