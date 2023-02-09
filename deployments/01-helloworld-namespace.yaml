@@ -1,6 +1,6 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: toolchain-ns
+  name: helloworld
   labels:
-    name: toolchain-ns
+    name: helloworld
