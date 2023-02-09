@@ -9,9 +9,9 @@ import (
 
 func main() {
 	http.HandleFunc("/helloworld", func(w http.ResponseWriter, r *http.Request) {
-		hostname, err = os.Hostname()
-		if err != nil {
-			fmt.Println(err)
+		hostname, err_hostname := os.Hostname()
+		if err_hostname != nil {
+			fmt.Println(err_hostname)
 		}
 		fmt.Fprintf(w, "Hello, World on %s!", hostname)
 	})
